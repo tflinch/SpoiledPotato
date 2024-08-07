@@ -5,7 +5,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Actor(models.Model):
     name = models.CharField(max_length=100)
-    birthday = models.CharField(max_length=100)
+    birthday = models.DateField()
     about = models.TextField()
     photo_url = models.TextField()
 
