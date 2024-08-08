@@ -9,4 +9,8 @@ def movie_list(request):
     movies = Movie.objects.all()
     return render(request, 'spoiledpotato/movie_list.html', {'movies': movies})
 
+def movie_detail(request, pk):
+    movie = Movie.objects.get(id=pk)
+    return render(request, 'spoiledpotato/movie_detail.html', {'movie': movie})
+
 # Create your views here.

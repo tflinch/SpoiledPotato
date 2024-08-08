@@ -1,0 +1,16 @@
+<!-- tunr/templates/tunr/artist_detail.html -->
+<h2>{{ movie.title }} <a href="">(edit)</a></h2>
+<h4>Runtime: {{ movie.length }}</h4>
+<h4>Rating: {{ movie.rating }}</h4>
+
+<img src="{{ movie.preview_url }}" alt="" class="movie-photo" />
+
+<h3>Actors <a href="">(+)</a></h3>
+<ul>
+    {% for actor in movie.actors.all %}
+
+    <li>
+        <a href="">{{ actor.name }}-{{ actor.birthday }}</a>
+    </li>
+    {% endfor %}
+</ul>
