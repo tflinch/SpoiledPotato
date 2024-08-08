@@ -1,0 +1,11 @@
+<!-- tunr/templates/spoiledpotato/actor_detail.html -->
+<h2>{{ actor.name }} <a href="">(edit)</a></h2>
+
+<h3>Movies:</h3>
+<ul>
+    {% for movie in actor.movies.all %}
+    <li>{{ movie.title }}</li>
+    {% endfor %}
+</ul>
+
+<p>About: {{ actor.about }}</p>
