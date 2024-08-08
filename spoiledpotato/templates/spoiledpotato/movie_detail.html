@@ -1,3 +1,4 @@
+{% extends 'spoiledpotato/base.html' %} {% block content %}
 <h2>{{ movie.title }} <a href="">(edit)</a></h2>
 <h4>Runtime: {{ movie.length }}</h4>
 <h4>Rating: {{ movie.rating }}</h4>
@@ -13,3 +14,4 @@
     </li>
     {% endfor %}
 </ul>
+{% endblock %}

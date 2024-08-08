@@ -1,4 +1,5 @@
 <!-- tunr/templates/spoiledpotato/actor_detail.html -->
+{% extends 'spoiledpotato/base.html' %} {% block content %}
 <h2>{{ actor.name }} <a href="">(edit)</a></h2>
 
 <h3>Movies:</h3>
@@ -9,3 +10,4 @@
 </ul>
 
 <p>About: {{ actor.about }}</p>
+{% endblock %}
