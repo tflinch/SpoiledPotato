@@ -13,7 +13,7 @@ class Actor(models.Model):
         return self.name
     
 class Movie(models.Model):
-    actor = models.ManyToManyField(Actor, related_name='movies')
+    actors = models.ManyToManyField(Actor, related_name='movies')
     title = models.CharField(max_length=100)
     length = models.DurationField()
     rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
