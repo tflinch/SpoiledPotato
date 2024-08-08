@@ -15,4 +15,11 @@ class MovieForm(forms.ModelForm):
         model = Movie
         fields = ('title', 'actors', 'length', 'rating', 'preview_url')
 
+class ActorForm(forms.ModelForm):
+    
+    class Meta:
+        model = Actor
+        fields = ('name', 'birthday', 'about', 'photo_url')
+
+
 

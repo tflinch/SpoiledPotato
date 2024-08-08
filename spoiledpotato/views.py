@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
 from .models import Movie, Actor
-from .forms import MovieForm
+from .forms import MovieForm, ActorForm
 
 def actor_list(request):
     actors = Actor.objects.all()
@@ -9,6 +9,16 @@ def actor_list(request):
 def actor_detail(request, pk):
     actor = Actor.objects.get(id=pk)
     return render(request, 'spoiledpotato/actor_detail.html', {'actor': actor})
+
+def actor_create(request):
+    if request.method == 'POST':
+        form = ActorForm(request.POST)
+        if form.is_valid():
+            actor = form.save()
+            return redirect('actor_detail', pk=actor.pk)
+    else:
+        form = ActorForm()
+    return render(request, 'spoiledpotato/actor_form.html', {'form': form}) 
 
 def movie_list(request):
     movies = Movie.objects.all()
