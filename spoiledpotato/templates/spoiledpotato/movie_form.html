@@ -1,0 +1,8 @@
+<!-- spoiledpotato/templates/tunr/movie_form.html -->
+{% extends 'spoiledpotato/base.html' %} {% block content %}
+<h1>New Movie</h1>
+<form method="POST" class="movie-form">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}

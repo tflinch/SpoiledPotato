@@ -1,5 +1,5 @@
 {% extends 'spoiledpotato/base.html' %} {% block content %}
-<h2>Movies <a href="">(+)</a></h2>
+<h2>Movies <a href="{% url 'movie_create' %}">(+)</a></h2>
 <ul>
     {% for movie in movies %}
     <li>
