@@ -5,6 +5,8 @@
 
 <img src="{{ movie.preview_url }}" alt="" class="movie-photo" />
 
+<a href="{% url 'movie_delete' pk=movie.pk %}">Delete</a>
+
 <h3>Actors <a href="">(+)</a></h3>
 <ul>
     {% for actor in movie.actors.all %}

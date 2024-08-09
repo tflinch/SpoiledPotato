@@ -49,6 +49,10 @@ def movie_detail(request, pk):
     movie = Movie.objects.get(id=pk)
     return render(request, 'spoiledpotato/movie_detail.html', {'movie': movie})
 
+def movie_delete(request, pk):
+    Movie.objects.get(id=pk).delete()
+    return redirect('movie_list')
+
 def movie_edit(request, pk):
     movie = Movie.objects.get(pk=pk)
     if request.method == "POST":
