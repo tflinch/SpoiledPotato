@@ -1,6 +1,6 @@
 <!-- tunr/templates/spoiledpotato/actor_detail.html -->
 {% extends 'spoiledpotato/base.html' %} {% block content %}
-<h2>{{ actor.name }} <a href="">(edit)</a></h2>
+<h2>{{ actor.name }} <a href="{% url 'actor_edit' pk=actor.pk %}">(edit)</a></h2>
 <img src="{{ actor.photo_url }}" alt="" class="movie-photo" />
 
 <h3>Movies:</h3>

@@ -20,6 +20,16 @@ def actor_detail(request, pk):
     actor = Actor.objects.get(id=pk)
     return render(request, 'spoiledpotato/actor_detail.html', {'actor': actor})
 
+def actor_edit(request, pk):
+    actor = Actor.objects.get(id=pk)
+    if request.method == "POST":
+        form = Actor.objects.get(request.POST, instance=actor)
+        if form.is_valid():
+            actor = form.save()
+            return redirect('actor_detail', pk=actor.pk)
+    else:
+        form = ActorForm(instance=actor)
+    return render(request, 'spoiledpotato/actor_form.html', {'form': form})
 
 def movie_list(request):
     movies = Movie.objects.all()
