@@ -2,7 +2,7 @@
 {% extends 'spoiledpotato/base.html' %} {% block content %}
 <h2>{{ actor.name }} <a href="{% url 'actor_edit' pk=actor.pk %}">(edit)</a></h2>
 <img src="{{ actor.photo_url }}" alt="" class="movie-photo" />
-
+<a href="{% url 'actor_delete' pk=actor.pk %}">Delete</a>
 <h3>Movies:</h3>
 <ul>
     {% for movie in actor.movies.all %}

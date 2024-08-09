@@ -20,6 +20,10 @@ def actor_detail(request, pk):
     actor = Actor.objects.get(id=pk)
     return render(request, 'spoiledpotato/actor_detail.html', {'actor': actor})
 
+def actor_delete(request, pk):
+    Actor.objects.get(id=pk).delete()
+    return redirect('actor_list')
+
 def actor_edit(request, pk):
     actor = Actor.objects.get(id=pk)
     if request.method == "POST":
