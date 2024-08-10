@@ -2,6 +2,10 @@ from django.shortcuts import render , redirect
 from .models import Movie, Actor
 from .forms import MovieForm, ActorForm, SearchForm
 
+def home_page(request):
+    recent_movies = Movie.objects.order_by('-id')[:5]
+    return render(request, 'spoiledpotato/home_page.html', {'recent_movies': recent_movies})
+
 def actor_list(request):
     actors = Actor.objects.all()
     return render(request, 'spoiledpotato/actor_list.html',{'actors':actors})

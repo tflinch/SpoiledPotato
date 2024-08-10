@@ -1,120 +1,183 @@
 /* spoiledpotato/static/css/styles.css */
+/* Center content within a maximum width */
 body {
     font-family: "Helvetica Neue", sans-serif;
     max-width: 50em;
     margin: auto;
     padding: 2em 1em;
-  }
- 
-  nav a {
+}
+
+/* Navigation bar main container */
+.navbar-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add some space below the nav */
+}
+
+/* Navbar links */
+nav a {
     border: 1px solid black;
     margin: 0.5em;
     padding: 0.5em;
     background-color: #eeeeee;
-  }
-  
-  nav a:hover {
-    background-color: orange;
-    color: blue;
-  }
-  
-  a,
-  a:visited {
     text-decoration: none;
     color: blue;
-  }
-  
-  a:hover {
-    background-color: #ccc;
-  }
-  
-  ul {
+}
+
+/* Hover effects for nav links */
+nav a:hover {
+    background-color: orange;
+    color: blue;
+}
+
+/* Navbar title, removing the border */
+.navbar-title {
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Navbar search container */
+.navbar-search {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Space between search input and button */
+    margin-top: 20px;
+}
+
+/* Search input styling */
+.search-input {
+    border: 1px solid black;
+    border-radius: 26px;
+    padding: 0.5em;
+}
+
+/* General styles for lists */
+ul {
     list-style-type: none;
-  }
-  
-  li {
-    margin: 0.25em;
-  }
+    padding: 0;
+}
 
+li {
+    margin: 0.25em 0;
+}
 
-  h1{
+/* Headings */
+h1 {
     font: inherit;
     color: inherit;
     letter-spacing: -0.05em;
     text-decoration: none;
     border-bottom: 1px solid black;
-  }
-  
-  h2 > a {
+}
+
+h2 > a {
     font-size: 0.75em;
-  }
-  
-  input {
+}
+
+/* Input fields */
+input {
     display: block;
     margin: 5px 0 20px 0;
     padding: 9px;
     border: solid 1px black;
     width: 300px;
     background: whitesmoke;
-  }
-  
-  input[type="submit"],
-  a.delete {
+}
+
+input[type="submit"],
+a.delete {
     width: auto;
     padding: 9px 15px;
     background-color: gray;
     border: 0;
     font-size: 14px;
     color: #ffffff;
-  }
-  
-  a.delete {
+}
+
+a.delete {
     background-color: red;
-  }
-  
-  .artist-photo {
+}
+
+/* Images */
+.artist-photo {
     width: 400px;
-  }
-  
-  span.nationality {
+}
+
+/* Text styling */
+span.nationality {
     font-size: 0.5em;
-  }
-  
-  .user-info {
+}
+
+/* User info alignment */
+.user-info {
     float: right;
-  }
-  
-  a.fav {
+}
+
+/* Favorite links */
+a.fav {
     text-decoration: none;
     color: red;
-  }
-  
-  a.no-fav {
+}
+
+a.no-fav {
     text-decoration: none;
     color: black;
-  }
-  
-  .fav:visited,
-  .no-fav:visited {
-    text-decoration: none;
-  }
+}
 
-  .navbar {
+.fav:visited,
+.no-fav:visited {
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: 5em auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Active item */
+.carousel-item.active {
+    display: block;
+}
+
+.home-content {
+    margin-top: 3em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-.navbar-search{
-    display: flex;
-    margin-top: 20px;
-    gap: 1em; 
-}
-.search-input{
-    border: 1px solid black;
-    border-radius: 26px;
-}
 
-.navbar-title {
-    border: none;
+.bttn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--text-color);
+    letter-spacing: 0.1rem;
+    transform: 0.5s ease;
+  }
+.bttn:hover {
+    background-color: orange;
+    color: blue;
+} 
+
+.bttn a{
+    text-decoration: none;
 }

@@ -5,21 +5,25 @@
 <head>
   <title>SpoiledPotato</title>
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
 </head>
 
 <body>
 
-  <nav class="navbar">
-    <h1 class="navbar-title">SpoiledPotato</h1>
+  <nav class="navbar-main">
+
+    <h1 class="navbar-title"><a href="/">SpoiledPotato</a></h1>
+
     <form method="GET" action="{% url 'search_view' %}" class="navbar-search">
       <input type="text" name="query" placeholder="Search..." value="{{ request.GET.query }}" class="search-input">
     </form>
-    <div class="navbar-links">
-      <a href="/">Movies</a>
+    <div>
+      <a href="/movies">Movies</a>
       <a href="/actors">Actors</a>
     </div>
   </nav>
   {% block content %}{% endblock %}
+  <script src="{% static 'js/carousel.js' %}"></script>
   {% block extra_js %}{% endblock %}
 </body>
 

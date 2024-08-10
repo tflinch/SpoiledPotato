@@ -1,0 +1,21 @@
+{% extends 'spoiledpotato/base.html' %}
+
+{% block content %}
+<div class="carousel">
+    {% for movie in recent_movies %}
+    <div class="carousel-item">
+        <img src="{{ movie.preview_url }}" alt="{{ movie.title }}">
+    </div>
+    {% endfor %}
+</div>
+
+<div class="home-content">
+    <div class="brief">
+        <h3>SpoiledPotato Entertainment Wiki</h3>
+        <p>The Global Enterainment Wiki</p>
+    </div>
+
+    <button class="bttn"><a href="{% url 'movie_create' %}">Add Your Favorites</a></button>
+</div>
+
+{% endblock %}
