@@ -11,9 +11,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False').lower() in ['true', '1', 't']
 DATABASE_URL = os.getenv('DATABASE_URL')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = ['spoiledpotato.onrender.com','https://spoiledpotato.onrender.com']
 
-# Application definition
+# Application definitiong
 INSTALLED_APPS = [
     'spoiledpotato',
     'django.contrib.admin',
