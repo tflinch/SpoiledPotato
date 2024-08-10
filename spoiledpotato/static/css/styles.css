@@ -5,7 +5,7 @@ body {
     margin: auto;
     padding: 2em 1em;
   }
-  
+ 
   nav a {
     border: 1px solid black;
     margin: 0.5em;
@@ -35,8 +35,9 @@ body {
   li {
     margin: 0.25em;
   }
-  
-  h1 {
+
+
+  h1{
     font: inherit;
     color: inherit;
     letter-spacing: -0.05em;
@@ -97,3 +98,23 @@ body {
   .no-fav:visited {
     text-decoration: none;
   }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-search{
+    display: flex;
+    margin-top: 20px;
+    gap: 1em; 
+}
+.search-input{
+    border: 1px solid black;
+    border-radius: 26px;
+}
+
+.navbar-title {
+    border: none;
+}
