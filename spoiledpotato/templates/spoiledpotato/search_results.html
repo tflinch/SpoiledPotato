@@ -1,0 +1,24 @@
+<!-- spoiledpotato/templates/spoiledpotato/search_results.html -->
+{% extends 'spoiledpotato/base.html' %}
+
+{% block content %}
+<h1>Search Results</h1>
+
+{% if results %}
+<h2>Movies</h2>
+<ul>
+    {% for movie in results.movies %}
+    <li>{{ movie.title }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Actors</h2>
+<ul>
+    {% for actor in results.actors %}
+    <li>{{ actor.name }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No results found.</p>
+{% endif %}
+{% endblock %}

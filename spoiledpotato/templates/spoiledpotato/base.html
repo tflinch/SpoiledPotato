@@ -10,6 +10,10 @@
 <body>
   <h1>SpoiledPotato</h1>
   <nav>
+    <form method="GET" action="{% url 'search_view' %}" class="navbar-search">
+      <input type="text" name="query" placeholder="Search..." value="{{ request.GET.query }}">
+      <button type="submit">Search</button>
+    </form>
     <a href="/actors">Actors</a>
     <a href="/">Movies</a>
   </nav>

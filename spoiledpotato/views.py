@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
 from .models import Movie, Actor
-from .forms import MovieForm, ActorForm
+from .forms import MovieForm, ActorForm, SearchForm
 
 def actor_list(request):
     actors = Actor.objects.all()
@@ -68,5 +68,18 @@ def movie_edit(request, pk):
         form = MovieForm(instance=movie)
     return render(request, 'spoiledpotato/movie_form.html', {'form': form})
 
+def search_view(request):
+    form = SearchForm()
+    results = None
 
+    if request.method == 'GET' and 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = {
+                'movies': Movie.objects.filter(title__icontains=query),
+                'actors': Actor.objects.filter(name__icontains=query)
+            }
+
+    return render(request, 'spoiledpotato/search_results.html', {'form': form, 'results': results})
 # Create your views here.
