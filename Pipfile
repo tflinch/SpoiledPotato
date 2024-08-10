@@ -8,6 +8,10 @@ django = "*"
 psycopg2-binary = "*"
 python-dotenv = "*"
 django-select2 = "*"
+whitenoise = {extras = ["brotli"], version = "*"}
+gunicorn = "*"
+uvicorn = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
