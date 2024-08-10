@@ -50,28 +50,29 @@ To set up this project locally, follow these steps:
 2. **Navigate to the project directory:**
 
    ```bash
-   cd 
+    cd spoiledpotato
    ```
 
 3. **Install dependencies:**
 
-   ```bash
-  pip install -r requirements.txt
+   ``` bash
+    pip install -r requirements.txt
    ```
 
 4. **Set up the environment variables:**
 
    - Create a `.env` file in the root directory.
    - Add the following environment variables:
-     ```
+   
+    ``` bash
     SECRET_KEY=your_secret_key
     DEBUG=True
     DATABASE_URL=your_database_url
-     ```
+    ```
 
 5. **Run the application:**
 
-   ```bash
+   ``` bash
    python manage.py runserver
    ```
 
